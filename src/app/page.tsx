@@ -1,12 +1,46 @@
-import Link from "next/link";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
+  const classrooms = [
+    {
+      subject: 'Pattern Recognition & Anomaly Detection',
+      program: 'B.Tech 7th (AIML)',
+      teacher: 'Ms Aradhana Kar'
+    },
+    {
+      subject: 'Deep Learning',
+      program: 'B.Tech 7th (AIML)',
+      teacher: 'Dr. Chinmaya Kumar Nayak'
+    },
+    {
+      subject: 'Compiler Design',
+      program: 'B.Tech 7th (AIML/DS/CSCD)',
+      teacher: 'Ms Aradhana Kar'
+    },
+    {
+      subject: 'Natural Language Processing & Machine Learning',
+      program: 'B.Tech 7th (AIML)',
+      teacher: 'Dr. Deepak Sahoo'
+    },
+    {
+      subject: 'Applications of Machine Learning',
+      program: 'B.Tech 7th (AIML)',
+      teacher: 'Dr. Anil Kumar'
+    }
+  ]
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <h1 className="text-xl font-bold">Sri Sri University | ERP System</h1>
-      <div className="mt-4">
-        <Link href="/academic-division/fet">Engineering and Technology</Link>
-      </div>
+    <main className="w-full max-w-screen-xl grid grid-cols-3 gap-12 mt-12">
+      {classrooms.map(classroom => (
+        <Card key={classroom.subject} className="flex flex-col justify-between">
+          <CardHeader>
+            <CardTitle>{classroom.subject}</CardTitle>
+            <CardDescription>{classroom.program}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>{classroom.teacher}</p>
+          </CardContent>
+        </Card>
+      ))}
     </main>
   );
 }

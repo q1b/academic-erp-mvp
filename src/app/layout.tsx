@@ -21,9 +21,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} font-sans antialiased`}
+        className={`${inter.variable} flex flex-col items-center`}
       >
+        <header className="w-full max-w-screen-xl py-1">
+          <div className="w-full border px-4 py-3 font-semibold rounded-lg">Classroom</div>
+        </header>
+        <div className="flex">
+        <aside className="w-32">
+          asd
+        </aside>
         {children}
+        </div>
       </body>
     </html>
   );
