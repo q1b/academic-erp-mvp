@@ -1,0 +1,1 @@
+Defines relationship between semester and courses within a program.
