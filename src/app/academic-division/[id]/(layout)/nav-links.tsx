@@ -26,7 +26,7 @@ export function NavLinks() {
         }
     ]
     return (
-        <nav className="flex items-center absolute left-1/2 -translate-x-1/2 gap-x-6 pl-4">
+        <nav className="flex items-center gap-x-6 pl-4">
             {panels.map(panel => (
                 <Link
                     key={panel.label}
