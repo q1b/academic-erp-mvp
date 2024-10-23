@@ -1,9 +1,13 @@
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarInset, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarInset, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarSeparator, SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { CalendarIcon, ChevronDown, HomeIcon, ListTodoIcon, Plus } from "lucide-react";
+import { CalendarIcon, ChevronDown, FileCheck2Icon, HomeIcon, InboxIcon, ListTodoIcon, NotebookPen, OptionIcon, PenBoxIcon, Plus, TornadoIcon } from "lucide-react";
 import { NavUser } from "@/components/user-nav";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function RootLayout({
   children,
@@ -85,16 +89,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/">
-                    <CalendarIcon />
-                    <span>Calendar</span>
+                    <InboxIcon />
+                    <span>Inbox</span>
                   </a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/">
-                    <ListTodoIcon />
-                    <span>Todo</span>
+                    <CalendarIcon />
+                    <span>Calendar</span>
                   </a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -102,12 +106,54 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarGroupContent>
         </SidebarGroup>
         <SidebarGroup className="p-0">
+          <SidebarGroupLabel className="pl-2 pt-3.5">Lectures</SidebarGroupLabel>
+          <Dialog>
+            <DialogTrigger asChild>
+              <SidebarGroupAction title="Add Lecture" className="top-3">
+                <Plus /> <span className="sr-only">Add Lectures</span>
+              </SidebarGroupAction>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>New Lecture</DialogTitle>
+                <DialogDescription>
+                  Create a new lecture by filling the form below.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid gap-4 py-4">
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="course" className="text-right">
+                    Course
+                  </Label>
+                  <Input
+                    id="course"
+                    defaultValue="Pedro Duarte"
+                    className="col-span-3"
+                  />
+                </div>
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="username" className="text-right">
+                    Username
+                  </Label>
+                  <Input
+                    id="username"
+                    defaultValue="@peduarte"
+                    className="col-span-3"
+                  />
+                </div>
+              </div>
+              <DialogFooter>
+                <Button type="submit">Save changes</Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+          <SidebarSeparator className="bg-sidebar" />
           <SidebarGroupContent>
             {classrooms.map((classroom) => (
               <a
                 href="#"
                 key={classroom.subject}
-                className="flex flex-col items-start p-2 text-sm leading-tight hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                className="flex rounded-md flex-col items-start p-2 text-sm leading-tight hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
               >
                 <span className="font-medium">{classroom.subject}</span>
                 <span className="text-xs mt-1">{classroom.program}</span>
