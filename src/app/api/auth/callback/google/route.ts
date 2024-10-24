@@ -5,6 +5,31 @@ import { decodeIdToken, type OAuth2Tokens } from "arctic";
 import { createUser, getUserFromEmail, updateUserPicture } from "@/database/actions/user";
 import { redirect } from "next/navigation";
 
+type GoogleUserResult = {
+	id: string;
+	email: string;
+	verified_email: boolean;
+	name: string;
+	given_name: string;
+	family_name: string;
+	picture: string;
+	locale: string;
+};
+
+function extractFromEmail(email_id: string | undefined | null) {
+	let group;
+	if (!(typeof email_id === 'string')) return { batch: null, program: null, ssu_email: false, student: false };
+	const regrex = /(?<name>\w+)\.(?<meta>\w+)@(?<university>\w+)\.edu\.in/;
+	group = email_id.match(regrex)?.groups;
+	if (!group) return { batch: null, program: null, ssu_email: false, student: false };
+	const { name, meta } = group;
+	const reg = /(?:[a-zA-Z])+(?<batch>\d{2,4})(?<program>(?:[a-zA-Z])+)/;
+	group = meta.match(reg)?.groups;
+	if (!group) return { batch: null, program: null, ssu_email: true, student: false };
+	const { batch, program } = group;
+	return { ssu_email: true, student: true, batch: batch.length === 2 ? `20${batch}` : batch, program };
+}
+
 export async function GET(request: Request): Promise<Response> {
 	const url = new URL(request.url);
 	const code = url.searchParams.get("code");
@@ -34,14 +59,16 @@ export async function GET(request: Request): Promise<Response> {
 		});
 	}
 	
-	const claims = decodeIdToken(tokens.idToken()) as { name: string; email: string; picture: string };;
+	const claims = decodeIdToken(tokens.idToken()) as GoogleUserResult;
 	console.log(claims);
 	
 	const name = claims.name;
     const email = claims.email;
     const picture = claims.picture;
 
-	if (email.includes("@srisriuniversity.edu.in") === false) {
+	const { batch, program, ssu_email, student } = extractFromEmail(email);
+	
+	if (ssu_email === false) {
 		return redirect('/?info=Only Gmail provided to you by Sri Sri University are valid for now');
 	}
 	
@@ -53,8 +80,9 @@ export async function GET(request: Request): Promise<Response> {
 		await setSession(existingUser.id)
 		return redirect("/");
 	}
-
-	const user = await createUser({ name, email, picture, role: 'user'});
+	
+	const user = await createUser({ name, email, picture, role: student ? 'student' : 'user' })
+	
 	await setSession(user.id);
 
 	return redirect("/");
