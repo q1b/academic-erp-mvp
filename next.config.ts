@@ -4,13 +4,13 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/academic-division/:id',
-        destination: '/academic-division/:id/programs',
+        source: '/faculty/:id',
+        destination: '/faculty/:id/programs',
         permanent: true,
       },
       {
-        source: '/academic-division/:id/programs/:program',
-        destination: '/academic-division/:id/programs/:program/batches',
+        source: '/faculty/:id/programs/:program',
+        destination: '/faculty/:id/programs/:program/batches',
         permanent: true,
       },
     ]

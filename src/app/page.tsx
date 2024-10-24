@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { getCurrentUser, signIn, signOut } from "@/lib/auth";
-import { ArrowRightCircleIcon, Boxes, GraduationCapIcon, Info, LayoutDashboard, LayoutDashboardIcon, LogOutIcon, ShieldCheck, University, User2Icon, UserRoundPenIcon } from "lucide-react";
+import { GraduationCapIcon, Info, LogOutIcon, ShieldCheck, User2Icon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -21,7 +21,7 @@ async function User() {
   const user = await getCurrentUser();
   return (
     <form>
-      <pre>{JSON.stringify(user,null,2)}</pre>
+      {/* <pre>{JSON.stringify(user,null,2)}</pre> */}
       {!user ? (
         <Button formAction={async () => {
           "use server"
@@ -46,7 +46,7 @@ async function User() {
             )}
             <div className="flex items-start gap-x-1">
               <Button variant="ghost" size="sm" asChild>
-                <Link href="academic-division">
+                <Link href="faculty">
                   <ShieldCheck /> Admin
                 </Link>
               </Button>

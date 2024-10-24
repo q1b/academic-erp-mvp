@@ -5,20 +5,20 @@ import Link from 'next/link'
 
 export function NavLinks() {
     const pathname = usePathname();
-    const params = useParams<{ id: string; program: string }>()
+    const params = useParams<{ id: string; }>()
 
     const panels = [
         {
-            label: 'Batches',
-            slug: '/batches'
+            label: 'Faculties',
+            slug: '/faculties'
         },
         {
-            label: 'Courses',
-            slug: '/courses'
+            label: 'Programs',
+            slug: '/programs'
         },
         {
-            label: 'Curriculum',
-            slug: '/curriculum',
+            label: 'News & Events',
+            slug: '/news-events'
         },
         {
             label: 'Settings',
@@ -31,8 +31,8 @@ export function NavLinks() {
                 <Link
                     key={panel.label}
                     className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium aria-[current='true']:bg-gray-100 text-gray-900 hover:bg-gray-50 hover:text-gray-900" 
-                    aria-current={pathname === `/academic-division/${params.id}/programs/${params.program}${panel.slug}`}
-                    href={`/academic-division/${params.id}/programs/${params.program}${panel.slug}`}
+                    aria-current={pathname === `/faculty/${params.id}${panel.slug}`}
+                    href={`/faculty/${params.id}${panel.slug}`}
                 >
                     {panel.label}
                 </Link>
