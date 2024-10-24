@@ -1,13 +1,10 @@
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarInset, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarSeparator, SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { CalendarIcon, ChevronDown, FileCheck2Icon, HomeIcon, InboxIcon, ListTodoIcon, NotebookPen, OptionIcon, PenBoxIcon, Plus, TornadoIcon } from "lucide-react";
+import { CalendarIcon, HomeIcon, InboxIcon, Plus } from "lucide-react";
 import { NavUser } from "@/components/user-nav";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { NewLectureForm } from "@/components/forms/lecture";
 
 export default function RootLayout({
   children,
@@ -18,23 +15,14 @@ export default function RootLayout({
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2">
-          <div className="flex items-center gap-2 px-4">
-            <SidebarTrigger className="-ml-1" />
+        <header className="flex h-14 shrink-0 items-center gap-2">
+          <div className="flex flex-1 items-center gap-2 px-3">
+            <SidebarTrigger />
             <Separator orientation="vertical" className="mr-2 h-4" />
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="/">
-                    Home
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                {/* <BreadcrumbSeparator className="hidden md:block" />
-                    <BreadcrumbItem>
-                      <BreadcrumbPage>Home</BreadcrumbPage>
-                    </BreadcrumbItem> */}
-              </BreadcrumbList>
-            </Breadcrumb>
+            <Button variant="secondary" size="sm">Homepage</Button>
+            <Button variant="ghost" size="sm">Attendance</Button>
+            <Button variant="ghost" size="sm">Assignments</Button>
+            <Button variant="ghost" size="sm">Grades</Button>
           </div>
         </header>
         {children}
@@ -120,28 +108,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   Create a new lecture by filling the form below.
                 </DialogDescription>
               </DialogHeader>
-              <div className="grid gap-4 py-4">
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="course" className="text-right">
-                    Course
-                  </Label>
-                  <Input
-                    id="course"
-                    defaultValue="Pedro Duarte"
-                    className="col-span-3"
-                  />
-                </div>
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="username" className="text-right">
-                    Username
-                  </Label>
-                  <Input
-                    id="username"
-                    defaultValue="@peduarte"
-                    className="col-span-3"
-                  />
-                </div>
-              </div>
+              <NewLectureForm />
               <DialogFooter>
                 <Button type="submit">Save changes</Button>
               </DialogFooter>

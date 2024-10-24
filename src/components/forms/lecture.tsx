@@ -1,17 +1,14 @@
 import {
     Select,
     SelectContent,
-    SelectGroup,
     SelectItem,
-    SelectLabel,
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
 import { Label } from '@/components/ui/label';
 import Form from 'next/form';
-import { Input } from "@/components/ui/input";
 
-export default function CreateLectureForm() {
+export function NewLectureForm() {
     return (
         <Form action=''>
             <div className="grid gap-4">

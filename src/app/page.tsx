@@ -1,5 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { getCurrentUser, signIn, signOut } from "@/lib/auth";
+import { ArrowRightCircleIcon, Boxes, GraduationCapIcon, LayoutDashboard, LayoutDashboardIcon, LogOutIcon, ShieldCheck, University, User2Icon, UserRoundPenIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { Suspense } from "react";
 
 function GoogleLogo() {
   return (
@@ -11,25 +16,53 @@ function GoogleLogo() {
 }
 
 async function User() {
+  const user = await getCurrentUser();
   return (
     <form>
-      {true ? (
+      {!user ? (
         <Button formAction={async () => {
           "use server"
-          console.log("LogIn")
+          await signIn()
         }}
           variant="outline">
           <GoogleLogo />
           Login with SSU Gmail
         </Button>
       ) : (
-        <Button formAction={async () => {
-          "use server"
-          console.log("SignOut")
-        }}
-          variant="destructive">
-          Sign Out
-        </Button>
+        <Card>
+          <CardHeader>
+            <CardTitle>Hello, {user.name}</CardTitle>
+            <CardDescription>{user.email}</CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-col items-start">
+            <div className="flex items-start gap-x-1">
+              <Button variant="ghost" size="sm" asChild>
+                <Link href="academic-division">
+                  <ShieldCheck /> Admin
+                </Link>
+              </Button>
+              <Button variant="ghost" size="sm" asChild>
+                <Link href="teacher-dashboard">
+                  <User2Icon /> Teacher
+                </Link>
+              </Button>
+              <Button variant="ghost" size="sm" asChild>
+                <Link href="student-dashboard">
+                  <GraduationCapIcon /> Student
+                </Link>
+              </Button>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button size="sm" formAction={async () => {
+              "use server"
+              await signOut()
+            }}
+              variant="destructive">
+              <LogOutIcon /> Sign Out
+            </Button>
+          </CardFooter>
+        </Card>
       )
       }
     </form>
@@ -40,7 +73,9 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center pt-20">
       <Image className="mb-10" width={192} height={192} src="/logo/srisriuniversity.png" alt="PWA" />
-      <User />
+      <Suspense>
+        <User />
+      </Suspense>
     </main>
   );
 }
