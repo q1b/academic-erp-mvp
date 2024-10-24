@@ -1,7 +1,9 @@
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { getCurrentUser, signIn, signOut } from "@/lib/auth";
-import { ArrowRightCircleIcon, Boxes, GraduationCapIcon, LayoutDashboard, LayoutDashboardIcon, LogOutIcon, ShieldCheck, University, User2Icon, UserRoundPenIcon } from "lucide-react";
+import { ArrowRightCircleIcon, Boxes, GraduationCapIcon, Info, LayoutDashboard, LayoutDashboardIcon, LogOutIcon, ShieldCheck, University, User2Icon, UserRoundPenIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -19,6 +21,7 @@ async function User() {
   const user = await getCurrentUser();
   return (
     <form>
+      <pre>{JSON.stringify(user,null,2)}</pre>
       {!user ? (
         <Button formAction={async () => {
           "use server"
@@ -35,6 +38,12 @@ async function User() {
             <CardDescription>{user.email}</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col items-start">
+            {user?.picture && (
+              <Avatar className="h-8 w-8 rounded-lg">
+                <AvatarImage src={user.picture} alt={user.name} />
+                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+              </Avatar>
+            )}
             <div className="flex items-start gap-x-1">
               <Button variant="ghost" size="sm" asChild>
                 <Link href="academic-division">
@@ -69,13 +78,28 @@ async function User() {
   )
 }
 
-export default function Home() {
+type SearchParams = Promise<{ info: string }>
+
+export default async function Home(props: {
+  searchParams: SearchParams
+}) {
+  const { info } = await props.searchParams;
   return (
     <main className="min-h-screen flex flex-col items-center pt-20">
       <Image className="mb-10" width={192} height={192} src="/logo/srisriuniversity.png" alt="PWA" />
       <Suspense>
         <User />
       </Suspense>
+
+      {info &&
+        <>
+          <div className="my-4"></div>
+          <Alert>
+            <Info className="w-4 h-4" />
+            <AlertTitle>Info</AlertTitle>
+            <AlertDescription>{info}</AlertDescription>
+          </Alert>
+        </>}
     </main>
   );
 }

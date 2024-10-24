@@ -2,7 +2,7 @@ import { setSession } from "@/lib/auth/session";
 import { google } from "@/lib/auth/oauth";
 import { cookies } from "next/headers";
 import { decodeIdToken, type OAuth2Tokens } from "arctic";
-import { createUser, getUserFromGoogleId } from "@/database/actions/user";
+import { createUser, getUserFromEmail, updateUserPicture } from "@/database/actions/user";
 import { redirect } from "next/navigation";
 
 export async function GET(request: Request): Promise<Response> {
@@ -34,26 +34,27 @@ export async function GET(request: Request): Promise<Response> {
 		});
 	}
 	
-	const claims = decodeIdToken(tokens.idToken()) as { sub: string; name: string; email: string; picture: string };;
-
- 	const googleUserId = claims.sub;
+	const claims = decodeIdToken(tokens.idToken()) as { name: string; email: string; picture: string };;
+	console.log(claims);
+	
 	const name = claims.name;
     const email = claims.email;
     const picture = claims.picture;
 
-	const existingUser = await getUserFromGoogleId(googleUserId);
-
+	if (email.includes("@srisriuniversity.edu.in") === false) {
+		return redirect('/?info=Only Gmail provided to you by Sri Sri University are valid for now');
+	}
+	
+	const existingUser = await getUserFromEmail(email);
+	
 	if (existingUser) {
+		if((!existingUser.picture) && picture) await updateUserPicture(existingUser.id, picture);
+		
 		await setSession(existingUser.id)
-		return new Response(null, {
-			status: 302,
-			headers: {
-				Location: "/"
-			}
-		});
+		return redirect("/");
 	}
 
-	const user = await createUser({googleId: googleUserId, name, email, picture, role: 'user'});
+	const user = await createUser({ name, email, picture, role: 'user'});
 	await setSession(user.id);
 
 	return redirect("/");
