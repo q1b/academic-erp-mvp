@@ -110,7 +110,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               </DialogHeader>
               <NewLectureForm />
               <DialogFooter>
-                <Button type="submit">Save changes</Button>
+                <Button type="submit">Create Lecture</Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>

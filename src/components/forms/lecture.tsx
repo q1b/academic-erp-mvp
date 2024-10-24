@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/select"
 import { Label } from '@/components/ui/label';
 import Form from 'next/form';
+import { Input } from "@/components/ui/input";
 
 export function NewLectureForm() {
     return (
@@ -69,18 +70,8 @@ export function NewLectureForm() {
                     </Select>
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4">
-                    <Label className="text-right"> Room No. </Label>
-                    <Select>
-                        <SelectTrigger className="col-span-1">
-                            <SelectValue placeholder="XXX" />
-                        </SelectTrigger>
-                        <SelectContent position="item-aligned">
-                            <SelectItem value="405">405</SelectItem>
-                            <SelectItem value="305">305</SelectItem>
-                            <SelectItem value="441">331</SelectItem>
-                            <SelectItem value="201">444</SelectItem>
-                        </SelectContent>
-                    </Select>
+                    <Label className="text-right"> Course </Label>
+                    <Input className="col-span-3"/>
                 </div>
             </div>
         </Form>
