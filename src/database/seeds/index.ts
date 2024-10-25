@@ -1,10 +1,13 @@
-import type { BatchResponse } from "drizzle-orm/batch";
 import { db } from "..";
 import * as schema from "../schema"
 import faculty from './data/faculty.json'
 import users from './data/user.json'
 
+let one = 0;
+
 export async function seedDatabase() {
+    if (one >= 1) return;
+    one+=1;
     for (let facultyIndex = 0; facultyIndex < faculty.length; facultyIndex++) {
         const facultyId = faculty[facultyIndex].id;
         await db.insert(schema.facultyTable).values({
@@ -23,11 +26,11 @@ export async function seedDatabase() {
                             id: userId,
                             name: user.name,
                             email: user.email,
-                            role: user.role,
+                            role: user.role
                         }),
                         db.insert(schema.professorTable).values({
                             userId: userId,
-                            facultyId: facultyId,
+                            facultyId: facultyId
                         })
                     ])
                     break;

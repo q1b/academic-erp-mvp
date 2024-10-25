@@ -3,10 +3,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { getCurrentUser, signIn, signOut } from "@/lib/auth";
-import { GraduationCapIcon, Info, LogOutIcon, ShieldCheck, User2Icon } from "lucide-react";
+import { GraduationCapIcon, Info, LogOutIcon, Pencil, ShieldCheck, User2Icon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+import { UserForm } from "@/atoms/user/ui";
 
 function GoogleLogo() {
   return (
@@ -32,18 +33,19 @@ async function User() {
           Login with SSU Gmail
         </Button>
       ) : (
-        <Card>
+        <Card className="relative">
+          <div className="absolute right-2 top-2">
+            <UserForm name={user.name} picture={user.picture} />
+          </div>
           <CardHeader>
+            <Avatar className="size-24 mb-4">
+              {user?.picture && <AvatarImage src={user?.picture} alt={user.name} />}
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
             <CardTitle>Hello, {user.name}</CardTitle>
             <CardDescription>{user.email}</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col items-start">
-            {user?.picture && (
-              <Avatar className="h-8 w-8 rounded-lg">
-                <AvatarImage src={user.picture} alt={user.name} />
-                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
-              </Avatar>
-            )}
             <div className="flex items-start gap-x-1">
               <Button variant="ghost" size="sm" asChild>
                 <Link href="faculty">
@@ -90,7 +92,6 @@ export default async function Home(props: {
       <Suspense>
         <User />
       </Suspense>
-
       {info &&
         <>
           <div className="my-4"></div>

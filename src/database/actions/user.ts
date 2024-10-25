@@ -22,8 +22,8 @@ export async function createUser({
     }).returning())[0];
 }
 
-export async function updateUserPicture(userId: string, picture: string): Promise<void> {
+export async function updateUser(userId: string, props: Partial<Omit<User, 'id' | 'createdAt'>>): Promise<void> {
     await db.update(userTable).set({
-        picture
+        ...props
     }).where(eq(userTable.id, userId));
 }
