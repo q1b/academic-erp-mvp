@@ -1,6 +1,9 @@
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarInset, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { getFaculty } from "@/database/actions/faculty";
 import { SidebarNavMenu } from "./nav-menu";
+import Link from "next/link";
+import { ArrowLeftCircleIcon, Home, HomeIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 type Params = Promise<{ id: string }>
 
@@ -22,6 +25,9 @@ export default async function FacultyLayout(props: {
                             <SidebarNavMenu/>
                         </SidebarGroupContent>
                     </SidebarGroup>
+                    <Button asChild variant="ghost" className="px-4 justify-start" size="xs">
+                        <Link href="/">Home</Link>
+                    </Button>
                 </SidebarContent>
             </Sidebar>
             <SidebarInset>
@@ -30,7 +36,9 @@ export default async function FacultyLayout(props: {
                     <SidebarTrigger className="ml-1"/>
                     </div>
                 </header>
+                <div className="px-6 mt-4">
                 {props.children}
+                </div>
             </SidebarInset>
         </SidebarProvider>
     )
