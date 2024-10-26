@@ -7,6 +7,7 @@ import { cache } from 'react';
 
 import { db } from '@/database';
 import * as table from '@/database/schema';
+import { redirect } from "next/navigation";
 
 const DAY_IN_MS = 1000 * 60 * 60 * 24;
 
@@ -81,6 +82,14 @@ export const getCurrentUser = async () => {
     const { user } = await validateRequest();
     return user ?? undefined;
 };
+
+export const getValidatedUser = async () => {
+	const user = await getCurrentUser();
+	if (!user) {
+		redirect('/');
+	}
+	return user;	
+}
 
 export const getCurrentSession = async () => {
     const { session } = await validateRequest();
