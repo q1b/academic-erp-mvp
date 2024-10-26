@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Compiler design",
+        "code": "BTCS-PC-015T"
+    },
+    {
+        "name": "Deep learning",
+        "code": "BTCS-AIML-SPE-011T"
+    },
+    {
+        "name": "Pattern recognition",
+        "code": "BTCS-AIML-SPE-012T"
+    },
+    {
+        "name": "Computational linguistics & NLP",
+        "code": "BTCS-AIML-SPE-013P"
+    },
+    {
+        "name": "Application of MLin industries",
+        "code": "BTCS-AIML-SPE-013P"
+    },
+    {
+        "name": "Descriptive analytics",
+        "code": "BTCS-DS-SPE-011T"
+    },
+    {
+        "name": "Social and web analytics",
+        "code": "BTCS-DS-SPE-012T"
+    },
+    {
+        "name": "Big Data Analytics",
+        "code": "BTCS-DS-SPE-013T"
+    },
+    {
+        "name": "BA for Industries and functional area",
+        "code": "BTCS-DS-SPE-014T"
+    },
+    {
+        "name": "Security Analytics",
+        "code": "BTCS-CSCD-SPE-013T"
+    },
+    {
+        "name": "Applied cloud computing",
+        "code": "BTCS-CSCD-SPE-014T"
+    },
+    {
+        "name": "Current trends in technology & its security & forensics aspects",
+        "code": "BTCS-CSCD-SPE-015T"
+    },
+    {
+        "name": "Red Teaming",
+        "code": "BTCS-CSCD-SPE-016T"
+    },
+    {
+        "name": "Research Project in relevant specialization",
+        "code": "BTCS-PR-003"
+    },
+    {
+        "name": "PrePlacement training",
+        "code": ""
+    },
+    {
+        "name": "Competitive Coding",
+        "code": ""
+    }
+]

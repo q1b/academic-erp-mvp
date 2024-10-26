@@ -1,6 +1,6 @@
 [
     {
-        "long-name": "B.Tech. (Computer Science & Engineering) with Specialization Artificial Intelligence & Machine Learning Integrated with IBM",
+        "full-name": "B.Tech. (Computer Science & Engineering) with Specialization Artificial Intelligence & Machine Learning Integrated with IBM",
         "short-name": "B.tech. CSE (AI & Machine Learning)",
         "very-short-name": "B.Tech. AIML",
         "department": "Emerging Technologies",
@@ -82,7 +82,7 @@
     },
     {
         "full-name": "M.Sc. Forensic Science",
-        "short-name": "B.Sc. Forensic Science",
+        "short-name": "M.Sc. Forensic Science",
         "department": "Forensic Science",
         "programme-type": "postgraduate"
     },

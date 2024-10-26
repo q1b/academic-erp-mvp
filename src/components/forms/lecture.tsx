@@ -8,6 +8,7 @@ import {
 import { Label } from '@/components/ui/label';
 import Form from 'next/form';
 import { Input } from "@/components/ui/input";
+import programs from "@/database/seeds/data/department/program.json"
 
 export function NewLectureForm() {
     return (
@@ -61,11 +62,9 @@ export function NewLectureForm() {
                             <SelectValue placeholder="Select a Program" />
                         </SelectTrigger>
                         <SelectContent position="item-aligned">
-                            <SelectItem value="b.tech">B.tech Computer Science</SelectItem>
-                            <SelectItem value="bba">2021</SelectItem>
-                            <SelectItem value="2022">2022</SelectItem>
-                            <SelectItem value="2023">2023</SelectItem>
-                            <SelectItem value="2024">2024</SelectItem>
+                            {programs.map((program) => (
+                                <SelectItem key={program['short-name']} value={program["short-name"]}>{program["short-name"]}</SelectItem>
+                            ))}
                         </SelectContent>
                     </Select>
                 </div>

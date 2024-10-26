@@ -1,29 +1,36 @@
 [
     {
+        "id": "1",
         "name": "Emerging Technologies",
         "faculty-id": "fet"
     },
     {
+        "id": "2",
         "name": "Electrical Engineering",
         "faculty-id": "fet"
     },
     {
+        "id": "3",
         "name": "Electronics Communication Engineering",
         "faculty-id": "fet"
     },
     {
+        "id": "4",
         "name": "Mechatronics Engineering",
         "faculty-id": "fet"
     },
     {
+        "id": "5",
         "name": "Computer Application",
         "faculty-id": "fet"
     },
     {
+        "id": "6",
         "name": "Forensic Science",
         "faculty-id": "fet"
     },
     {
+        "id": "7",
         "name": "Sustainable Technologies",
         "faculty-id": "fet"
     }
