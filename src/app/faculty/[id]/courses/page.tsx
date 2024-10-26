@@ -4,7 +4,7 @@ import courses from "@/database/seeds/data/department/course.json"
 
 export default function Programs() {
 
-	return <div className="mt-4 px-6">
+	return <div>
 		<DataTable columns={columns} data={courses} />
 	</div>
 }

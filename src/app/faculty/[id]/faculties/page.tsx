@@ -9,7 +9,7 @@ type Params = Promise<{ id: string }>
 export default async function Page({ params }: { params: Params }) {
     const professorList = await getProfessorListFromFaculty((await params).id);
     return (
-        <div className="px-10">
+        <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-2 gap-12">
                 {professorList.map(professor => (
                     <div className="flex flex-col gap-y-1 items-center" key={professor.id}>

@@ -24,7 +24,7 @@ export default function Programs() {
 			name: 'B. Tech. (Electronics & Communication Engineering) with Specialization VLSI Chip Design Integrated with INTEL & IESA',
 		}
 	];
-	return <div className="mt-4 px-6">
+	return <div>
 		<DataTable columns={columns} data={programs} />
 	</div>
 }
