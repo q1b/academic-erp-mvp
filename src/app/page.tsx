@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import { UserForm } from "@/atoms/user/ui";
+import { seedDatabase } from "@/database/seeds";
 
 function GoogleLogo() {
   return (

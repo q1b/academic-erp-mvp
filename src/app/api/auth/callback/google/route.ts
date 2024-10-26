@@ -2,7 +2,7 @@ import { setSession } from "@/lib/auth/session";
 import { google } from "@/lib/auth/oauth";
 import { cookies } from "next/headers";
 import { decodeIdToken, type OAuth2Tokens } from "arctic";
-import { createUser, getUserFromEmail, updateUserPicture } from "@/database/actions/user";
+import { createUser, getUserFromEmail, updateUser } from "@/database/actions/user";
 import { redirect } from "next/navigation";
 
 type GoogleUserResult = {
@@ -75,7 +75,7 @@ export async function GET(request: Request): Promise<Response> {
 	const existingUser = await getUserFromEmail(email);
 	
 	if (existingUser) {
-		if((!existingUser.picture) && picture) await updateUserPicture(existingUser.id, picture);
+		if((!existingUser.picture) && picture) await updateUser(existingUser.id, { picture });
 		
 		await setSession(existingUser.id)
 		return redirect("/");

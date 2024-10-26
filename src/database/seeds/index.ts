@@ -1,21 +1,30 @@
 import { db } from "..";
 import * as schema from "../schema"
-import faculty from './data/faculty.json'
-import users from './data/user.json'
+import facultyList from './data/faculty.json'
+import userList from './data/user.json'
 
 let one = 0;
 
 export async function seedDatabase() {
+    console.log(one, "SEEDING")
     if (one >= 1) return;
     one+=1;
-    for (let facultyIndex = 0; facultyIndex < faculty.length; facultyIndex++) {
-        const facultyId = faculty[facultyIndex].id;
-        await db.insert(schema.facultyTable).values({
-            id: facultyId,
-            name: faculty[facultyIndex].name,
-        });
-        for (let index = 0; index < users.length; index++) {
-            const user = users[index]
+
+}
+
+// Seed Faculty & it's professors
+export async function seedFacultyUserDatabase() {
+    console.log(one, "SEEDING")
+    if (one >= 1) return;
+    one+=1;
+    for (let facultyIndex = 0; facultyIndex < facultyList.length; facultyIndex++) {
+        const faculty = facultyList[facultyIndex];
+        // await db.insert(schema.facultyTable).values({
+        //     id: faculty.id,
+        //     name: faculty.name
+        // });
+        for (let index = 0; index < userList.length; index++) {
+            const user = userList[index]
             switch (user.role) {
                 case 'admin':
                     break;
@@ -26,13 +35,16 @@ export async function seedDatabase() {
                             id: userId,
                             name: user.name,
                             email: user.email,
-                            role: user.role
+                            role: user.role,
+                            picture: user.picture,
                         }),
                         db.insert(schema.professorTable).values({
                             userId: userId,
-                            facultyId: facultyId
+                            facultyId: faculty.id,
+                            designation: user.desgination
                         })
-                    ])
+                    ]);
+                    console.log("Inserted Professors")
                     break;
                 case 'student':
                     break;

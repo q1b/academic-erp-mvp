@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Emerging Technologies",
+        "faculty-id": "fet"
+    },
+    {
+        "name": "Electrical Engineering",
+        "faculty-id": "fet"
+    },
+    {
+        "name": "Electronics Communication Engineering",
+        "faculty-id": "fet"
+    },
+    {
+        "name": "Mechatronics Engineering",
+        "faculty-id": "fet"
+    },
+    {
+        "name": "Computer Application",
+        "faculty-id": "fet"
+    },
+    {
+        "name": "Forensic Science",
+        "faculty-id": "fet"
+    },
+    {
+        "name": "Sustainable Technologies",
+        "faculty-id": "fet"
+    }
+]

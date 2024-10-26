@@ -1,0 +1,101 @@
+[
+    {
+        "long-name": "B.Tech. (Computer Science & Engineering) with Specialization Artificial Intelligence & Machine Learning Integrated with IBM",
+        "short-name": "B.tech. CSE (AI & Machine Learning)",
+        "very-short-name": "B.Tech. AIML",
+        "department": "Emerging Technologies",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "B.Tech. (Computer Science & Engineering) with Specialization Data Science Integrated with IBM.",
+        "short-name": "B.tech. CSE (Data Science)",
+        "very-short-name": "B.Tech. Data Science",
+        "department": "Emerging Technologies",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "B.Tech. (Computer Science & Engineering) with Specialization Cyber Security & Cyber Defence Integrated with TCS & Cyber Dojo",
+        "short-name": "B.tech. CSE (Cyber Security & Cyber Defence)",
+        "very-short-name": "B.Tech. Cyber Security",
+        "department": "Emerging Technologies",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "B.Tech. (Computer Science & Engineering ) with Specialization JAVA Full Stack Integrated with L&T",
+        "short-name": "B.tech. CSE (JAVA Full Stack)",
+        "department": "Emerging Technologies",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "B.Tech. (Computer Science & Engineering) with Specialization Apprentice Embedded Cyber Security & Cyber Defence Integrated with Cyber Dojo",
+        "short-name": "B.tech. CSE Cyber Security & Cyber Defence (Apprentice Embedded)",
+        "department": "Emerging Technologies",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "B. Tech. (Electrical Engineering) with Specialization Electrical Vehicle Integrated with L&T",
+        "short-name": "B.tech. Electrical Engineering",
+        "department": "Electrical Engineering",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "Apprentices embedded M.Tech. Cyber Security (In Association with Cyber Dojo)",
+        "short-name": "M.tech. CSE Cyber Security & Cyber Defence (Apprentice Embedded)",
+        "department": "Emerging Technologies",
+        "programme-type": "postgraduate"
+    },
+    {
+        "full-name": "B. Tech. (Electronics & Communication Engineering) with Specialization VLSI Chip Design Integrated with INTEL & IESA",
+        "short-name": "B.tech. Electronics & Communication Engineering",
+        "department": "Electronics Communication Engineering",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "B. Tech. (Mechatronics Engineering) with Specialization Electrical Vehicle-Mechanical Integrated with L&T",
+        "short-name": "B.tech. Mechatronics Engineering",
+        "department": "Mechatronics Engineering",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "Bachelor of Computer Application (BCA) Integrated with INTEL",
+        "short-name": "Bachelor in Computer Application (BCA)",
+        "department": "Computer Application",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "Master in Computer Application (MCA) Integrated with INTEL.(2024-26)",
+        "short-name": "Master of Computer Applications (MCA)",
+        "department": "Computer Application",
+        "programme-type": "postgraduate"
+    },
+    {
+        "full-name": "Apprentice Embedded MCA Integrated with Cyber Dojo. (2024-26)",
+        "short-name": "MCA - Cyber Security (Apprentices Embedded)",
+        "department": "Computer Application",
+        "programme-type": "postgraduate"
+    },
+    {
+        "full-name": "B.Sc. Forensic Science",
+        "short-name": "B.Sc. Forensic Science",
+        "department": "Forensic Science",
+        "programme-type": "undergraduate"
+    },
+    {
+        "full-name": "M.Sc. Forensic Science",
+        "short-name": "B.Sc. Forensic Science",
+        "department": "Forensic Science",
+        "programme-type": "postgraduate"
+    },
+    {
+        "full-name": "PG Diploma in Disaster Management",
+        "short-name": "PG Diploma in Disaster Management",
+        "department": "Sustainable Technologies",
+        "programme-type": "postgraduate"
+    },
+    {
+        "full-name": "PG Diploma in AI Application for Disaster Risk Reduction",
+        "short-name": "PG Diploma in AI Application for Disaster Risk Reduction",
+        "department": "Sustainable Technologies",
+        "programme-type": "postgraduate"
+    }
+]
