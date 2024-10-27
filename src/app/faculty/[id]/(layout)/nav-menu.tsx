@@ -14,6 +14,10 @@ export function SidebarNavMenu() {
             slug: '/faculties'
         },
         {
+            label: 'Students',
+            slug: '/students'
+        },
+        {
             label: 'Departments',
             slug: '/departments'
         },

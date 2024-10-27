@@ -1,66 +1,74 @@
 [
     {
-        "name": "Compiler design",
-        "code": "BTCS-PC-015T"
+        "name": "Computational Thinking and ProblemSolving for Software Development using 'C'.",
+        "code": "TCS101"
     },
     {
-        "name": "Deep learning",
-        "code": "BTCS-AIML-SPE-011T"
+        "name": "Basic Electronics",
+        "code": "TEC101"
     },
     {
-        "name": "Pattern recognition",
-        "code": "BTCS-AIML-SPE-012T"
+        "name": "Python Programming",
+        "code": "TCS103"
     },
     {
-        "name": "Computational linguistics & NLP",
-        "code": "BTCS-AIML-SPE-013P"
+        "name": "Foundations to AI-ML",
+        "code": "TAI103"
     },
     {
-        "name": "Application of MLin industries",
-        "code": "BTCS-AIML-SPE-013P"
+        "name": "Data structure using 'C'",
+        "code": "TCS104"
     },
     {
-        "name": "Descriptive analytics",
-        "code": "BTCS-DS-SPE-011T"
+        "name": "Basic Electrical",
+        "code": "TEE101"
     },
     {
-        "name": "Social and web analytics",
-        "code": "BTCS-DS-SPE-012T"
+        "name": "Computer Organization and Architecture",
+        "code": "TCS201"
     },
     {
-        "name": "Big Data Analytics",
-        "code": "BTCS-DS-SPE-013T"
+        "name": "Object oriented programming using java",
+        "code": "TCS203"
     },
     {
-        "name": "BA for Industries and functional area",
-        "code": "BTCS-DS-SPE-014T"
+        "name": "Database Engineering",
+        "code": "TCS305"
     },
     {
-        "name": "Security Analytics",
-        "code": "BTCS-CSCD-SPE-013T"
+        "name": "Computer Networks",
+        "code": "TCS207"
     },
     {
-        "name": "Applied cloud computing",
-        "code": "BTCS-CSCD-SPE-014T"
+        "name": "Operating Systems",
+        "code": "TCS209"
     },
     {
-        "name": "Current trends in technology & its security & forensics aspects",
-        "code": "BTCS-CSCD-SPE-015T"
+        "name": "Discrete mathematics",
+        "code": "TCS211"
     },
     {
-        "name": "Red Teaming",
-        "code": "BTCS-CSCD-SPE-016T"
+        "name": "Internet and web technology",
+        "code": "TCS301"
     },
     {
-        "name": "Research Project in relevant specialization",
-        "code": "BTCS-PR-003"
+        "name": "Theory Of Computation",
+        "code": "TCS303"
     },
     {
-        "name": "PrePlacement training",
-        "code": ""
+        "name": "Algorithm design and analysis",
+        "code": "TCS205"
     },
     {
-        "name": "Competitive Coding",
-        "code": ""
+        "name": "Project management for professionals",
+        "code": "TCS307"
+    },
+    {
+        "name": "Research methodology-1",
+        "code": "RM1"
+    },
+    {
+        "name": "Compiler Design",
+        "code": "TCS309"
     }
 ]

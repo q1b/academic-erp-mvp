@@ -1,0 +1,482 @@
+[
+    {
+        "name": "Aditya Jyotiraditya Sahoo",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "aditya.s2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Dibyanshu Mohapatra",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "dibyanshu.m2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Akash Samantray",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "akash.s2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Riya",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "riya.s2021btcseai@srisriuniversity.edu.in ",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Chinmaya Kumar Kar",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "chinmaya.k2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Pavan R Hegde",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "pavan.h2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Vecha Jatadhar",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "vecha.j2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Kashif Ahmed Khan",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "kasif.k2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "M.S.L.B Saranya",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "mokarala.s2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Aditya Narayan Panda",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "aditya.p2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "MOHIT KEDIA",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "mohit.k2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Kirtidev Parida",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "kirtidev.p2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Pradosh Ku Pandav",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "pradosh.p2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Saurabh Sundar Ray",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "saurabh.r2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Vikshant Mandal",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "vikshant.m2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Pratik Ku. Swain",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "pratik.s2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Shaurya Khanna",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "shaurya.k2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Om Janmesh Rout",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "janmesh.r2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Tejas Band",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "tejas.b2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Sree Shivani Bhandari",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "bhandari.s2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Ritesh Kumar Nayak",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "ritesh.n2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Somesh Sharma",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "somesh.s2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Swayam Rout",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "swayam.r2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Sonali Nanda",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "sonali.n2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Barsha Sahoo",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "barsha.s2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Bireshwar Nanda Deb",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "bireshwar.d2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Anisha Bakshi",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "anisha.b2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Anumola Roshan",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "anumola.r2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Sthitapragyan Mahapatra",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "sthitapragyan.m2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Sankalp Nayak",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "sankalp.n2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Satyen Dash",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "satyen.d2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Vishrut Kumar",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "vishrut.k2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Soumya Ranjan Nayak",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "soumya.n2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Vardhan Prasanna Kulkarni",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "vardhan.k2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Pallabee Sahoo",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "pallabee.s2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Apparna Singh",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "apparna.s2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Swaraj Preetam",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "swaraj.p2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Hara Soumya Parida",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "hara.p2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Patil Ayush Ashok",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "ayush.p2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Vijay Krishnan T",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "vijay.t2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Riwaj Adhikari",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "riwaj.a2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Sukhpreet Singh",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "sukhpreet.s2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Swaroop Baibhav",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "swaroop.b2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "B Debasish",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "debasish.b2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Pratik Nath",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "pratik.n2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Om Ghanshyam Pancholi",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "om.p2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Adarsh Singh",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "adarsh.s2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Shubhankar Pradhan",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "shubhankar.p2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Meemansu Chandrakar",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "meemansu.c2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Sanskar Lohar",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "sanskar.l2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Siddhartha Kumar Pachourey",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "siddhartha.p2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Sarthak Swarup",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "sarthak.s2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Shreya Adya",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "shreya.a2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Parth A Barot",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "parth.b2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Ishika Garg",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "ishika.g2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Samriddhi Jain",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "samriddhi.j2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Arunoday Karmakar",
+        "program": "btcsecs",
+        "batch": "2021",
+        "email": "arunoday.k2021btcsecs@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Shrestha Kumar Agarwal",
+        "program": "btcseds",
+        "batch": "2021",
+        "email": "shrestha.a2021btcseds@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Rajul Shrivastava",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "rajul.s2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    },
+    {
+        "name": "Abhisikta Moharana",
+        "program": "btcseai",
+        "batch": "2021",
+        "email": "abhisikta.m2021btcseai@srisriuniversity.edu.in",
+        "role": "student",
+        "section": null
+    }
+]

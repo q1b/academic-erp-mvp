@@ -45,7 +45,7 @@ export default async function FacultyLayout(props: {
                         <SidebarTrigger className="ml-1" />
                     </div>
                 </header>
-                <div className="px-6 mt-4">
+                <div className="px-6">
                     {props.children}
                 </div>
             </SidebarInset>

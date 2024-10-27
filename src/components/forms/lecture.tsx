@@ -7,8 +7,8 @@ import {
 } from "@/components/ui/select"
 import { Label } from '@/components/ui/label';
 import Form from 'next/form';
-import { Input } from "@/components/ui/input";
 import programs from "@/database/seeds/data/department/program.json"
+import courses from "@/database/seeds/data/department/course.json"
 
 export function NewLectureForm() {
     return (
@@ -70,7 +70,16 @@ export function NewLectureForm() {
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4">
                     <Label className="text-right"> Course </Label>
-                    <Input className="col-span-3"/>
+                    <Select>
+                        <SelectTrigger className="col-span-3">
+                            <SelectValue placeholder="Select a Course" />
+                        </SelectTrigger>
+                        <SelectContent position="item-aligned">
+                            {courses.map((course) => (
+                                <SelectItem key={course['name']} value={course["name"]}>{course["name"]}</SelectItem>
+                            ))}
+                        </SelectContent>
+                    </Select>
                 </div>
             </div>
         </Form>
